@@ -21,7 +21,7 @@ const MainNav = () => {
         <nav className="border-b border-gray-300 w-full fixed top-0
         gap-4 flex justify-center items-center p-3 left-0
         bg-gradient-to-br from-gray-100 to-white shadow-sm shadow-gray-100">
-            <div className="left-10 absolute">
+            <div className="left-10 absolute brightness-100 hover:brightness-80 duration-500">
                 <a className="inline-flex items-center justify-center gap-3" href="/">
                     <h1 className="text-gray-500 text-l font-medium">LYSZT</h1>
                     <img className="w-10" src="src/assets/images/iconstyle.png" alt="Arrow, login button."/>
@@ -38,7 +38,7 @@ const MainNav = () => {
                     />
                 ))}
             </div>
-            <div className="right-10 absolute bg-gray-100
+            <div className="right-10 absolute bg-gray-100 brightness-100
              shadow-sm border border-gray-200 pr-5 hover:bg-gray-200 duration-200">
                 <a className="inline-flex items-center justify-center gap-3" href="/">
                     <img className="w-10" src="src/assets/images/login.svg" alt="Arrow, login button."/>
