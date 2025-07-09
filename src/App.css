@@ -9,3 +9,25 @@
   padding: 2rem;
   text-align: center;
 }
+body {
+  background-image: url("src/assets/images/background.jpg");
+  background-size: cover;
+}
+
+@keyframes width_in{
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 75%;
+    opacity: 1;
+  }
+}
+
+.navGlass {
+  background: linear-gradient(90deg, rgba(211, 211, 211, 0.65), rgba(255, 255, 255, 0.32));
+  backdrop-filter: blur(1px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: width_in 4s forwards;
+}

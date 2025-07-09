@@ -18,13 +18,12 @@ const MakeButton = ({ name, href }) => {
 
 const MainNav = () => {
     return (
-        <nav className="border-b border-gray-300 w-full fixed top-0
-        gap-4 flex justify-center items-center p-3 left-0
-        bg-gradient-to-br from-gray-100 to-white shadow-sm shadow-gray-100">
+        <nav className="w-350 fixed left-50 bottom-5 rounded-full
+        gap-2 flex justify-center items-center p-3
+        navGlass">
             <div className="left-10 absolute brightness-100 hover:brightness-80 duration-500">
                 <a className="inline-flex items-center justify-center gap-3" href="/">
-                    <h1 className="text-gray-500 text-l font-medium">LYSZT</h1>
-                    <img className="w-10" src="src/assets/images/iconstyle.png" alt="Arrow, login button."/>
+                    <h1 className="text-gray-700 text-l font-medium hover:text-blue-400">LYSZT</h1>
 
                 </a>
             </div>
@@ -39,9 +38,8 @@ const MainNav = () => {
                 ))}
             </div>
             <div className="right-10 absolute bg-gray-100 brightness-100
-             shadow-sm border border-gray-200 pr-5 hover:bg-gray-200 duration-200">
-                <a className="inline-flex items-center justify-center gap-3" href="/">
-                    <img className="w-10" src="src/assets/images/login.svg" alt="Arrow, login button."/>
+             shadow-sm border border-gray-200 pr-6 pl-6 hover:bg-gray-200 duration-200 rounded-full">
+                <a className="inline-flex items-center justify-center gap-3 p-3" href="/">
                     <h1 className="text-gray-500 text-l font-medium">Login</h1>
                 </a>
             </div>
