@@ -37,7 +37,7 @@ body::before{
 /*-- GENERIC & DECOS */
 .div-bar {
   animation: fade_and_expand 2s both ease-in-out;
-  animation-delay: 2s;
+  animation-delay: 4s;
 }
 
 /*-- ANIMATIONS */
