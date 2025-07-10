@@ -10,17 +10,56 @@
   text-align: center;
 }
 body {
+  background: none !important;
+}
+body::before{
+  content: "";
   background-image: url("src/assets/images/background.jpg");
   background-size: cover;
-  backdrop-filter: blur(100%);
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: background_animation 20s ease-in-out both;
+  animation-delay: 2s;
 }
 /*-- FONT TITLES */
 .font-title {
   font-family: "Lato Medium";
+  animation: generic_fade 2s both ease-in-out;
+
+}
+
+/*-- GENERIC & DECOS */
+.div-bar {
+  animation: generic_fade 2s both ease-in-out;
+  animation-delay: 2s;
 }
 
 /*-- ANIMATIONS */
 
+@keyframes generic_fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes background_animation {
+  0% {
+    filter: contrast(0) brightness(2);
+
+  }
+  100% {
+    filter: contrast(1);
+  }
+}
 @keyframes width_in{
   from {
     width: 0;
@@ -37,5 +76,5 @@ body {
   background: linear-gradient(90deg, rgba(211, 211, 211, 0.65), rgba(255, 255, 255, 0.32));
   backdrop-filter: blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  animation: width_in 6s forwards;
+  animation: width_in 6s both;
 }
