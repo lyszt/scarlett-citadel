@@ -2,10 +2,9 @@ import React from 'react';
 
 const navigation = [
     { name: 'About', href: '#', current: true },
-    { name: 'Contact', href: '#', current: false },
+    { name: 'Hire me', href: '#', current: false },
     { name: 'Projects', href: '#', current: false },
     { name: 'Resume', href: '#', current: false },
-    { name: 'GitHub', href: '#', current: false },
 ]
 
 const MakeButton = ({ name, href }) => {
