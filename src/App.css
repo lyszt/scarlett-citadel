@@ -29,7 +29,8 @@ body::before{
 }
 /*-- FONT TITLES */
 .font-title {
-  font-family: "Lato Medium";
+  font-family: Lato, sans-serif;
+  font-weight: 500;
   animation: generic_fade 2s both ease-in-out;
 
 }
