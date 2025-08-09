@@ -44,7 +44,7 @@ body::before{
   width: 100%;
   height: 100%;
   z-index: -1;
-  animation: background_animation 10s ease-in-out both;
+  animation: background_animation 5s ease-in-out both;
   animation-delay: 2s;
 }
 /*-- FONT TITLES */
