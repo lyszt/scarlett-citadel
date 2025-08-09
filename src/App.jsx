@@ -5,7 +5,6 @@ import Intro from './intro.jsx';
 import About from "./about.jsx";
 import './App.css';
 import './assets/css/Animations.css'
-import backgroundVideo from '../public/assets/videos/abstractbackground1.mp4'
 
 function App() {
     const [activePage, setActivePage] = useState('home');
