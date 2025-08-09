@@ -33,6 +33,11 @@ const MainNav = (props) => {
     const handleTimeUpdate = () => {
         setCurrentTime(audioPlayer.current.currentTime);
     };
+    const handleSongEnd = () => {
+        setIsPlaying(false);
+        setCurrentTime(0);
+    };
+
 
     const formatTime = (timeInSeconds) => {
         const minutes = Math.floor(timeInSeconds / 60);
@@ -76,7 +81,7 @@ const MainNav = (props) => {
              shadow-sm bg-gray-100 duration-200 rounded-full">
                 <button onClick={toggleMusicTheme} className="inline-flex items-center justify-center gap-3 p-3" href="/">
                     <img  src={isPlaying ? pauseIcon : playIcon} className="w-4 text-stone-700 invert" alt="Play music theme."/>
-                    <audio ref={audioPlayer} onTimeUpdate={handleTimeUpdate}>
+                    <audio ref={audioPlayer} onTimeUpdate={handleTimeUpdate} onEnded={handleSongEnd}>
                         <source src={standByMeSong} type="audio/mpeg"/>
                     </audio>
                 </button>
