@@ -30,6 +30,7 @@ body::after {
   left: 0;
   width: 110%;
   opacity: 30%;
+  animation: background_animation 2s both ease-in-out;
 }
 body::before{
   content: "";
