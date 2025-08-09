@@ -26,7 +26,7 @@ const MainNav = (props) => {
         navGlass">
             <div className="left-10 absolute brightness-100 hover:brightness-80 duration-500">
                 <a className="inline-flex items-center justify-center gap-3" href="/">
-                    <h1 className="text-gray-700 text-l font-medium hover:text-blue-400">LYSZT</h1>
+                    <h1 className="text-gray-100 text-l font-medium hover:text-blue-400">LYSZT</h1>
 
                 </a>
             </div>

@@ -19,14 +19,21 @@ body::after {
   top: 0;
   left: 0;
   position: absolute;
-  background: rgba(255, 255, 255, 0.49);
+  background: none;
   animation: blur_behind 2s both ease-in-out;
   animation-delay: 10s;
   z-index: 0;
 }
+.video-background {
+  z-index: 0;
+  top: 0;
+  left: 0;
+  width: 110%;
+  opacity: 30%;
+}
 body::before{
   content: "";
-  background-image: url("./assets/images/background.jpg");
+  background-color: rgba(0, 0, 0, 0.9);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

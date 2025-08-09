@@ -27,10 +27,10 @@ const Intro = React.forwardRef((props, ref) => {
     return (
         <div className="z-10 relative" id="Home">
             <div className="w-full text-center flex flex-col gap-12 justify-center items-center">
-                <h1 className="font-bold font-title text-gray-600 text-shadow-2xs shadow-gray-900 text-8xl">
+                <h1 className="font-bold font-title text-gray-400 text-shadow-2xs shadow-gray-900 text-8xl">
                     {wordState}
                 </h1>
-                <div className="w-40 brightness-100 shadow-sm bg-gradient-to-r from-gray-700 to-gray-500 h-2 text-center duration-200 rounded-full div-bar">
+                <div className="w-40 brightness-100 shadow-sm bg-gradient-to-r from-gray-500 to-gray-300 h-2 text-center duration-200 rounded-full div-bar">
                 </div>
             </div>
         </div>
