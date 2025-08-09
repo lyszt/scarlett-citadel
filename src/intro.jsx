@@ -25,8 +25,7 @@ function Intro() {
         };
     }, []);
     return (
-        <main className="z-10">
-            <MainNav />
+        <main className="z-10" id="Home">
             <div className="w-full text-center flex flex-col gap-12 justify-center items-center">
                 <h1 className="font-bold font-title text-gray-600 text-shadow-2xs shadow-gray-900 text-8xl">
                     {wordState}

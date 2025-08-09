@@ -1,21 +1,26 @@
 import React from 'react';
 
 const navigation = [
-    { name: 'About', href: '#', current: true },
+    {name:  'Home', href: '#', current: true},
+    { name: 'About', href: '#', current: false },
     { name: 'Hire me', href: '#', current: false },
     { name: 'Projects', href: '#', current: false },
-    { name: 'Resume', href: '#', current: false },
+    { name: 'Resume', href: '#', current: false }
 ]
 
-const MakeButton = ({ name, href }) => {
-    return (
-        <a className="mr-5 text-gray-600 appearence-none
-        hover:text-blue-500 hover:bg-gray-200 transition-all duration-300 p-2 rounded-full"
-           href={href}>{name}</a>
-    )
-}
 
-const MainNav = () => {
+
+const MainNav = (props) => {
+
+    const MakeButton = ({ name, href , onClick}) => {
+        console.log(`For button "${name}", the onClick prop is:`, onClick);
+        return (
+        <button className="mr-5 text-gray-600 appearence-none
+        hover:text-blue-500 hover:bg-gray-200 transition-all duration-300 p-2 rounded-full"
+                    onClick={() => onClick(name)}> {name}</button>
+        )
+    }
+
     return (
         <nav className="w-350 fixed left-50 bottom-5 rounded-full
         gap-2 flex justify-center items-center p-3
@@ -33,6 +38,7 @@ const MainNav = () => {
                     <MakeButton key={item.name}
                                 name={item.name}
                                 href={item.href}
+                                onClick={props.onClickHide}
                     />
                 ))}
             </div>

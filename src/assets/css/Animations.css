@@ -1,0 +1,12 @@
+
+/* Transitions */
+
+@keyframes ItemSlide {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(0) translateY(100%);
+    }
+
+}

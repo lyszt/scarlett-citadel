@@ -10,11 +10,11 @@
   text-align: center;
 }
 body {
-  background: none !important;
+  background: rgba(255,255,255,0.8) !important;
 }
 body::before{
   content: "";
-  background-image: url("src/assets/images/background.jpg");
+  background-image: url("./assets/images/background.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -99,7 +99,7 @@ body::before{
   }
 }
 .navGlass {
-  background: linear-gradient(90deg, rgba(211, 211, 211, 0.65), rgba(255, 255, 255, 0.32));
+  background: linear-gradient(90deg, rgba(211, 211, 211, 0), rgba(255, 255, 255, 0.32));
   backdrop-filter: blur(1px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   animation: width_in 6s both;
