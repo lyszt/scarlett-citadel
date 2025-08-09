@@ -51,7 +51,7 @@ body::before{
 .font-title {
   font-family: Lato, sans-serif;
   font-weight: 500;
-  animation: generic_fade 2s both ease-in-out;
+  animation: title_fade 4s both ease-in-out;
 
 }
 
@@ -69,6 +69,21 @@ body::before{
   }
   to {
     opacity: 1;
+  }
+}
+@keyframes title_fade {
+  0% {
+    opacity: 0;
+    filter: brightness(0%);
+
+  }
+  50% {
+    filter: brightness(10%);
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+    filter: brightness(100%);
   }
 }
 @keyframes fade_and_expand {
