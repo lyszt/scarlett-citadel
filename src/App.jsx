@@ -1,32 +1,38 @@
 import React, {useEffect, useRef, useState} from 'react';
+import { motion, AnimatePresence } from "framer-motion";
 import MainNav from './nav.jsx';
 import Intro from './intro.jsx';
 import './App.css';
+import './assets/css/Animations.css'
 
 function App() {
+    const [activePage, setActivePage] = useState('home');
+    const nodeRef = useRef(null);
 
-    const [introVisible, setIntroVisible] = useState(true);
-    const [aboutVisible, setAboutVisible] = useState(true);
-    const setButtonStates = [
-        setIntroVisible,
-        setAboutVisible,
-    ]
     function navTransition(name) {
         name = name.trim().toLowerCase();
-        console.log(`[INFO] Clicking ${name}.`);
-        setButtonStates.forEach(setterFunction => {
-            setterFunction(false)
-        })
-        if(name === 'home') {
-            setIntroVisible(true);
-        }
+        setActivePage(name)
     }
     return (
-        <main className="z-10">
-            <MainNav onClickHide={navTransition}/>
-            {introVisible && <Intro/>}
+        <main>
+            <MainNav onClickHide={navTransition} />
+
+            <AnimatePresence>
+                {activePage === 'home' && (
+                    <motion.div
+                        key="home"
+                        initial={{ opacity: 0, y: '-100%' }}
+                        animate={{ opacity: 1, y: '0%' }}
+                        exit={{ opacity: 0, y: '100%' }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Intro />
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </main>
     );
+
 }
 
 export default App;

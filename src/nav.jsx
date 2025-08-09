@@ -13,7 +13,6 @@ const navigation = [
 const MainNav = (props) => {
 
     const MakeButton = ({ name, href , onClick}) => {
-        console.log(`For button "${name}", the onClick prop is:`, onClick);
         return (
         <button className="mr-5 text-gray-600 appearence-none
         hover:text-blue-500 hover:bg-gray-200 transition-all duration-300 p-2 rounded-full"
