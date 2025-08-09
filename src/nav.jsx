@@ -15,14 +15,14 @@ const MainNav = (props) => {
     const MakeButton = ({ name, href , onClick}) => {
         return (
         <button className="mr-5 text-gray-600 appearence-none
-        hover:text-blue-500 hover:bg-gray-200 transition-all duration-300 p-2 rounded-full"
+        hover:text-blue-500 hover:bg-gray-200 transition-all pl-4 pr-4 duration-300 p-2 rounded-xl"
                     onClick={() => onClick(name)}> {name}</button>
         )
     }
 
     return (
         <nav className="w-350 fixed left-50 bottom-5 rounded-full
-        gap-2 flex justify-center items-center p-3
+        gap-2 flex justify-center items-center p-3 z-20
         navGlass">
             <div className="left-10 absolute brightness-100 hover:brightness-80 duration-500">
                 <a className="inline-flex items-center justify-center gap-3" href="/">

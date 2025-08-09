@@ -15,7 +15,7 @@ function App() {
     }
     return (
         <main>
-            <MainNav onClickHide={navTransition} />
+            <MainNav onClickHide={navTransition}/>
 
             <AnimatePresence>
                 {activePage === 'home' && (
