@@ -58,45 +58,52 @@ const MainNav = (props) => {
 
     return (
         <nav className="w-350 fixed left-50 bottom-5 rounded-full
-        gap-2 flex justify-center items-center p-3 z-20
+         p-3 z-20 hover:p-3.5 >
         navGlass">
-            <div className="left-10 absolute brightness-100 hover:brightness-80 duration-500">
-                <a className="inline-flex items-center justify-center gap-3" href="/">
-                    <h1 className="text-gray-100 text-l font-medium hover:text-blue-400">LYSZT</h1>
+            <div className="liquidGlass-effect"></div>
+            <div className="liquidGlass-tint"></div>
+            <div className="liquidGlass-shine"></div>
 
-                </a>
-            </div>
+            <div className="nav-content-wrapper gap-2 flex justify-center items-center">
+                <div className="left-10 absolute brightness-100 hover:brightness-80 duration-500 z-5">
+                    <a className="inline-flex items-center justify-center gap-3" href="/">
+                        <h1 className="text-gray-100 text-l font-medium hover:text-blue-400">LYSZT</h1>
 
-            <div className="shadow-sm shadow-gray-300 border border-gray-200
-             rounded-full p-3 pr-5 pl-5 fit-content bg-gradient-to-br from-gray-50 to-gray-100">
-                {navigation.map((item) => (
-                    <MakeButton key={item.name}
-                                name={item.name}
-                                href={item.href}
-                                onClick={props.onClickHide}
-                    />
-                ))}
-            </div>
-            <div className=" bg-cy00 brightness-100
-             shadow-sm bg-gray-100 duration-200 rounded-full">
-                <button onClick={toggleMusicTheme} className="inline-flex items-center justify-center gap-3 p-3" href="/">
-                    <img  src={isPlaying ? pauseIcon : playIcon} className="w-4 text-stone-700 invert" alt="Play music theme."/>
-                    <audio ref={audioPlayer} onTimeUpdate={handleTimeUpdate} onEnded={handleSongEnd}>
-                        <source src={standByMeSong} type="audio/mpeg"/>
-                    </audio>
-                </button>
-            </div>
+                    </a>
+                </div>
 
-            <div className="flex flex-col justify-start items-start text-left  text-[.7em] text-gray-100 w-1/8">
-                <span>{songName} - {artistName}</span>
-                <span className="text-xs">{formatTime(currentTime)}</span>
-            </div>
 
-            <div className="right-10 absolute bg-gray-100 brightness-100
-             shadow-sm border border-gray-200 pr-6 pl-6 hover:bg-gray-200 duration-200 rounded-full">
-                <a className="inline-flex items-center justify-center p-3" href="/">
-                    <h1 className="text-gray-500 text-l font-medium">Login</h1>
-                </a>
+                <div className="shadow-sm shadow-gray-300 border border-gray-200
+                 rounded-full p-3 pr-5 pl-5 fit-content bg-gradient-to-br from-gray-50 to-gray-100 z-5">
+                    {navigation.map((item) => (
+                        <MakeButton key={item.name}
+                                    name={item.name}
+                                    href={item.href}
+                                    onClick={props.onClickHide}
+                        />
+                    ))}
+                </div>
+                <div className=" bg-cy00 brightness-100
+                 shadow-sm bg-gray-100 duration-200 rounded-full z-5">
+                    <button onClick={toggleMusicTheme} className="inline-flex items-center justify-center gap-3 p-3" href="/">
+                        <img  src={isPlaying ? pauseIcon : playIcon} className="w-4 text-stone-700 invert" alt="Play music theme."/>
+                        <audio ref={audioPlayer} onTimeUpdate={handleTimeUpdate} onEnded={handleSongEnd}>
+                            <source src={standByMeSong} type="audio/mpeg"/>
+                        </audio>
+                    </button>
+                </div>
+
+                <div className="flex flex-col justify-start items-start text-left  text-[.7em] text-gray-100 w-1/8 z-5">
+                    <span>{songName} - {artistName}</span>
+                    <span className="text-xs">{formatTime(currentTime)}</span>
+                </div>
+
+                <div className="right-10 absolute bg-gray-100 brightness-100
+                 shadow-sm border border-gray-200 pr-6 pl-6 hover:bg-gray-200 duration-200 rounded-full z-5">
+                    <a className="inline-flex items-center justify-center p-3" href="/">
+                        <h1 className="text-gray-500 text-l font-medium">Login</h1>
+                    </a>
+                </div>
             </div>
         </nav>
     );

@@ -118,9 +118,8 @@ body::before{
   }
 }
 @keyframes width_in{
-  from {
-    width: 0;
-    opacity: 0;
+  0% {
+    width: 50%;
   }
   to {
     width: 75%;
@@ -142,10 +141,10 @@ body::before{
   }
 }
 .navGlass {
-  background: linear-gradient(90deg, rgba(211, 211, 211, 0), rgba(255, 255, 255, 0.32));
-  backdrop-filter: blur(5px);
+  background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
   animation: width_in 6s both;
+  transition: 1s;
 }
 .sideNavGlass {
   background: linear-gradient(90deg, rgba(223, 223, 223, 0.77), rgba(255, 255, 255, 0.78));
@@ -157,7 +156,42 @@ body::before{
   animation: generic_fade 2s ease-in-out both;
   animation-delay: 6s;
 }
+.navGlass .liquidGlass-effect,
+.navGlass .liquidGlass-tint,
+.navGlass .liquidGlass-shine {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+.navGlass .liquidGlass-tint {
+  background: linear-gradient(90deg, rgba(211, 211, 211, 0), rgba(255, 255, 255, 0.32));
+}
+.navGlass .liquidGlass-effect {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  filter: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg'%3e%3cfilter id='glass-distortion' x='0%25' y='0%25' width='100%25' height='100%25'%3e%3cfeTurbulence type='fractalNoise' baseFrequency='0.01 0.01' numOctaves='1' seed='5' result='turbulence'/%3e%3cfeComponentTransfer in='turbulence' result='mapped'%3e%3cfeFuncR type='gamma' amplitude='1' exponent='10' offset='0.5'/%3e%3cfeFuncG type='gamma' amplitude='0' exponent='1' offset='0'/%3e%3cfeFuncB type='gamma' amplitude='0' exponent='1' offset='0.5'/%3e%3c/feComponentTransfer%3e%3cfeGaussianBlur in='turbulence' stdDeviation='3' result='softMap'/%3e%3cfeSpecularLighting in='softMap' surfaceScale='5' specularConstant='1' specularExponent='100' lighting-color='white' result='specLight'%3e%3cfePointLight x='-200' y='-200' z='300'/%3e%3c/feSpecularLighting%3e%3cfeComposite in='specLight' operator='arithmetic' k1='0' k2='1' k3='1' k4='0' result='litImage'/%3e%3cfeDisplacementMap in='SourceGraphic' in2='softMap' scale='150' xChannelSelector='R' yChannelSelector='G'/%3e%3c/filter%3e%3c/svg%3e#glass-distortion");
+  z-index: 1;
+}
 
+.navGlass .liquidGlass-tint {
+  background: rgba(25, 25, 25, 0.3);
+  z-index: 2;
+}
+
+.navGlass .liquidGlass-shine {
+  box-shadow: inset 1px 1px 1px 0 rgba(255, 255, 255, 0.2);
+  z-index: 3;
+}
+
+.nav-content-wrapper {
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1.5rem;
+  gap: 1rem;
+
+}
 
 .intro-container {
   position: absolute;
