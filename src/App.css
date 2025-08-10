@@ -20,7 +20,6 @@ body::after {
   left: 0;
   position: absolute;
   background: none;
-  animation: blur_behind 2s both ease-in-out;
   animation-delay: 10s;
   z-index: 0;
 }
@@ -144,7 +143,7 @@ body::before{
 }
 .navGlass {
   background: linear-gradient(90deg, rgba(211, 211, 211, 0), rgba(255, 255, 255, 0.32));
-  backdrop-filter: blur(1px);
+  backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.2);
   animation: width_in 6s both;
 }
