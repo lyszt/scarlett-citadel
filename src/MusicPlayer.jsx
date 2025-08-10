@@ -1,0 +1,56 @@
+import React, { useState, useRef } from 'react';
+import playIcon from './assets/icons/play.svg';
+import pauseIcon from './assets/icons/pause.svg';
+import standByMeSong from './assets/audios/standbyme.mp3';
+
+const MusicPlayer = () => {
+    const [isPlaying, setIsPlaying] = useState(false);
+    const [currentTime, setCurrentTime] = useState(0);
+    const audioPlayer = useRef(null);
+    const songName = "Stand By Me";
+    const artistName = "Florence + The Machine";
+
+    const handleTimeUpdate = () => {
+        setCurrentTime(audioPlayer.current.currentTime);
+    };
+
+    const handleSongEnd = () => {
+        setIsPlaying(false);
+        setCurrentTime(0);
+    };
+
+    const formatTime = (timeInSeconds) => {
+        const minutes = Math.floor(timeInSeconds / 60);
+        const seconds = Math.floor(timeInSeconds % 60);
+        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+    };
+
+    function toggleMusicTheme() {
+        if (isPlaying) {
+            audioPlayer.current.pause();
+        } else {
+            audioPlayer.current.play();
+        }
+        setIsPlaying(!isPlaying);
+    }
+
+    return (
+        <div className="flex items-center gap-2 z-5">
+            <div className="bg-gray-100 shadow-sm rounded-full">
+                <button onClick={toggleMusicTheme} className="inline-flex items-center justify-center gap-3 p-3">
+                    <img src={isPlaying ? pauseIcon : playIcon} className="w-4 text-stone-700 invert" alt="Play music theme." />
+                    <audio ref={audioPlayer} onTimeUpdate={handleTimeUpdate} onEnded={handleSongEnd}>
+                        <source src={standByMeSong} type="audio/mpeg" />
+                    </audio>
+                </button>
+            </div>
+
+            <div className="flex flex-col justify-start items-start text-left text-[.7em] text-gray-100 w-auto">
+                <span>{songName} - {artistName}</span>
+                <span className="text-xs">{formatTime(currentTime)}</span>
+            </div>
+        </div>
+    );
+};
+
+export default MusicPlayer;

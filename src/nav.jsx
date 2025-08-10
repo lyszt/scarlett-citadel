@@ -1,8 +1,5 @@
 import React, {useEffect, useRef, useState} from 'react';
-import playIcon from './assets/icons/play.svg';
-import pauseIcon from './assets/icons/pause.svg';
-// Stand by me florence & the machine
-import standByMeSong from './assets/audios/standbyme.mp3';
+import MusicPlayer from './MusicPlayer';
 
 const navigation = [
     {name:  'Home', href: '#', current: true},
@@ -22,37 +19,6 @@ const MainNav = (props) => {
         hover:text-blue-500 hover:bg-gray-200 transition-all pl-4 pr-4 duration-300 p-2 rounded-xl"
                     onClick={() => onClick(name)}> {name}</button>
         )
-    }
-
-    const [isPlaying, setIsPlaying] = useState(false);
-    const [currentTime, setCurrentTime] = useState(0);
-    const audioPlayer = useRef(null);
-    const songName = "Stand By Me";
-    const artistName = "Florence + The Machine";
-
-    const handleTimeUpdate = () => {
-        setCurrentTime(audioPlayer.current.currentTime);
-    };
-    const handleSongEnd = () => {
-        setIsPlaying(false);
-        setCurrentTime(0);
-    };
-
-
-    const formatTime = (timeInSeconds) => {
-        const minutes = Math.floor(timeInSeconds / 60);
-        const seconds = Math.floor(timeInSeconds % 60);
-        return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
-    };
-
-
-    function toggleMusicTheme() {
-        if (isPlaying) {
-            audioPlayer.current.pause();
-        } else {
-            audioPlayer.current.play();
-        }
-        setIsPlaying(!isPlaying);
     }
 
 
@@ -83,22 +49,9 @@ const MainNav = (props) => {
                         />
                     ))}
                 </div>
-                <div className=" bg-cy00 brightness-100
-                 shadow-sm bg-gray-100 duration-200 rounded-full z-5">
-                    <button onClick={toggleMusicTheme} className="inline-flex items-center justify-center gap-3 p-3" href="/">
-                        <img  src={isPlaying ? pauseIcon : playIcon} className="w-4 text-stone-700 invert" alt="Play music theme."/>
-                        <audio ref={audioPlayer} onTimeUpdate={handleTimeUpdate} onEnded={handleSongEnd}>
-                            <source src={standByMeSong} type="audio/mpeg"/>
-                        </audio>
-                    </button>
-                </div>
+                <MusicPlayer />
 
-                <div className="flex flex-col justify-start items-start text-left  text-[.7em] text-gray-100 w-1/8 z-5">
-                    <span>{songName} - {artistName}</span>
-                    <span className="text-xs">{formatTime(currentTime)}</span>
-                </div>
-
-                <div className="right-10 absolute bg-gray-100 brightness-100
+                <div className="right-10 absolute bg-gray-100 brightness-100 hover:pr-6.5 hover:pl-6.5 hover:p7 transition-[5s]
                  shadow-sm border border-gray-200 pr-6 pl-6 hover:bg-gray-200 duration-200 rounded-full z-5">
                     <a className="inline-flex items-center justify-center p-3" href="/">
                         <h1 className="text-gray-500 text-l font-medium">Login</h1>
