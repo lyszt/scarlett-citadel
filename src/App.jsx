@@ -5,6 +5,7 @@ import Intro from './intro.jsx';
 import About from "./about.jsx";
 import './App.css';
 import './assets/css/Animations.css'
+import backgroundVideo from './assets/videos/abstractbackground1.webm'
 
 function App() {
     const [activePage, setActivePage] = useState('home');
@@ -43,7 +44,7 @@ function App() {
                 )}
             </AnimatePresence>
             { /* This is the background */}
-            <video src="./assets/videos/abstractbackground1.mp4" className="video-background fixed" autoPlay muted loop> </video>
+            <video src={backgroundVideo} className="video-background fixed" autoPlay muted loop> </video>
 
         </main>
     );
