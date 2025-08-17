@@ -37,5 +37,10 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  transition: 4s;
 }
 
+
+body.alternate {
+  filter: invert(1) hue-rotate(140deg) saturate(500%);
+}

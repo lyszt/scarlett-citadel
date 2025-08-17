@@ -4,17 +4,28 @@ import MainNav from './nav.jsx';
 import Intro from './intro.jsx';
 import About from "./about.jsx";
 import './App.css';
+import './MainPage.css';
 import './assets/css/Animations.css'
 import backgroundVideo from './assets/videos/abstractbackground1.webm'
 
 function App() {
     const [activePage, setActivePage] = useState('home');
-    const nodeRef = useRef(null);
 
     function navTransition(name) {
         name = name.trim().toLowerCase();
         setActivePage(name)
     }
+
+    // Sometimes invert colour
+    useEffect(() => {
+        // Toggle body class every 3 seconds
+        const interval = setInterval(() => {
+            document.body.classList.toggle("alternate");
+        }, 40000);
+
+        return () => clearInterval(interval);
+    }, []);
+
     return (
         <main>
             <MainNav onClickHide={navTransition}/>
@@ -50,5 +61,6 @@ function App() {
     );
 
 }
+
 
 export default App;
