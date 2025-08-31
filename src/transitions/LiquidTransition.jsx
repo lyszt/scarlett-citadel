@@ -11,7 +11,7 @@ const dropConfig = {
     // Adjusted stagger delay for the new duration.
     staggerDelay: 90,
     // A palette of multiple grey tones.
-    colors: ["#F5F5F5", "#E8E8E8", "#DDDDDD", "#D0D0D0", "#C8C8C8"]
+    colors: ["#F5F5F5", "#E8E8E8", "#2e2e2e", "#303030", "#C8C8C8"]
 };
 
 // Pre-defined starting positions, adjusted to use wide-spreading percentages for guaranteed coverage.
