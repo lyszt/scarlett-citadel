@@ -16,14 +16,14 @@ const MainNav = (props) => {
     const MakeButton = ({ name, href , onClick}) => {
         return (
         <button className="mr-5 text-gray-600 appearence-none
-        hover:text-blue-500 hover:bg-gray-200 transition-all pl-4 pr-4 duration-300 p-2 rounded-xl"
+        hover:text-blue-500 hover:bg-gray-200 transition-all pl-4 pr-4 duration-300 p-2"
                     onClick={() => onClick(name)}> {name}</button>
         )
     }
 
 
     return (
-        <nav className="w-[50vw] fixed left-50 bottom-5 rounded-full
+        <nav className="w-[50vw] fixed left-50 top-5 rounded-xl
          p-3 z-20 hover:p-3.5 >
         navGlass">
             <div className="liquidGlass-effect"></div>
