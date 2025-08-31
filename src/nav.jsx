@@ -6,9 +6,8 @@ import worldIcon from "./assets/icons/world.svg";
 const navigation = [
     { key: 'navHome', name: 'Home', href: '#' },
     { key: 'navAbout', name: 'About', href: '#' },
-    { key: 'navHireMe', name: 'Hire me', href: '#' },
-    { key: 'navProjects', name: 'Projects', href: '#' },
-    { key: 'navResume', name: 'Resume', href: '#' }
+    { key: 'navResume', name: 'Resume', href: '#' },
+    { key: 'navProjects', name: 'Projects', href: '#' }
 ];
 
 const languages = [
