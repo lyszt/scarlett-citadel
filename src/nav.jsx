@@ -118,7 +118,7 @@ const MainNav = (props) => {
                     <div className="right-10 absolute bg-gray-100 brightness-100 hover:pr-6.5 hover:pl-6.5 hover:p7 transition-[5s]
                  shadow-sm border border-gray-200 pr-6 pl-6 hover:bg-gray-200 duration-200 rounded-full z-5">
                         <a className="inline-flex items-center justify-center p-3" href="/">
-                            <h1 className="text-gray-500 text-l font-medium">Login</h1>
+                            <h1 className="text-gray-900 text-l font-medium">Login</h1>
                         </a>
                     </div>
                 </div>
