@@ -217,6 +217,7 @@ const Resume = React.forwardRef((props, ref) => {
                                         <li>{t('langEnglish')}</li>
                                         <li>{t('langFrench')}</li>
                                         <li>{t('langPortuguese')}</li>
+                                        <li>{t('langSpanish')}</li>
                                     </ul>
                                 </div>
                             </aside>
