@@ -26,15 +26,13 @@ const LanguageSelector = ({ isOpen, onClose }) => {
         onClose();
     };
 
-    if (!isOpen) return null;
-
     return (
         <div
-            className="fixed inset-0 bg-black bg-opacity-30 backdrop-blur-sm z-30 flex items-end"
+            className={`fixed inset-0 z-30 flex items-end transition-opacity duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
             onClick={onClose}
         >
             <div
-                className={`w-full h-1/2 bg-white rounded-t-3xl shadow-2xl p-8 flex flex-col items-center justify-center transform transition-transform duration-500 ease-in-out ${isOpen ? 'translate-y-0' : 'translate-y-full'}`}
+                className={`w-full h-1/2 bg-white rounded-t-3xl shadow-2xl p-8 flex flex-col items-center justify-center transform transition-transform duration-1000 ease-out ${isOpen ? 'translate-y-0' : 'translate-y-full'}`}
                 onClick={(e) => e.stopPropagation()}
             >
                 <h2 className="text-3xl font-bold text-gray-800 mb-2">{t('selectLanguage')}</h2>
@@ -103,7 +101,6 @@ const MainNav = (props) => {
                     </div>
                     <div className="shadow-sm shadow-gray-300 border border-gray-200
                  rounded-full p-3 pr-5 pl-5 fit-content bg-gradient-to-br from-gray-50 to-gray-100 z-5">
-                        {/* --- UPDATED to pass both the key and original name --- */}
                         {navigation.map((item) => (
                             <MakeButton key={item.key}
                                         tKey={item.key}
