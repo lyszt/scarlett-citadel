@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import MainNav from './nav.jsx';
 import Intro from './intro.jsx';
 import About from "./about.jsx";
+import Resume from "./Resume.jsx";
 import LiquidTransition from "./transitions/LiquidTransition.jsx"; // Ensure path is correct
 import './App.css';
 import './MainPage.css';
@@ -29,7 +30,6 @@ function App() {
         setNextPage(null); // Clean up state
     };
 
-    // This function is now only responsible for resetting the transition state at the very end.
     const handleTransitionComplete = () => {
         setIsTransitioning(false);
     };
@@ -68,14 +68,25 @@ function App() {
                         <About />
                     </motion.div>
                 )}
+                {activePage === 'resume' && (
+                    <motion.div
+                        key="resume"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <Resume />
+                    </motion.div>
+                )}
             </AnimatePresence>
 
             <video src={backgroundVideo} className="video-background fixed" autoPlay muted loop> </video>
 
             <LiquidTransition
                 isActive={isTransitioning}
-                onCoverComplete={handleCoverComplete} // Pass the new mid-point handler
-                onAnimationComplete={handleTransitionComplete} // Pass the final handler
+                onCoverComplete={handleCoverComplete}
+                onAnimationComplete={handleTransitionComplete}
             />
         </main>
     );
