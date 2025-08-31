@@ -9,15 +9,17 @@ const About = React.forwardRef((props, ref) => {
     return (
         <section className="z-10 w-screen absolute top-0 left-0 h-full" id="About">
             <div className="bg-stone-100 items-start justify-center flex-row-reverse flex gap-10">
-                <video className="w-[80%] m-20" src={AbstrackBlackVideo} autoPlay muted/>
+                <video className="w-[80%] m-20" src={AbstrackBlackVideo} autoPlay muted loop/>
             </div>
             <div className="bg-stone-100 items-start justify-center flex-row-reverse flex gap-10 pb-[10%]">
                 <div className="w-[80%] text-right gap-3 flex mr-[10%] ">
                     <h2 className="text-stone-800 text-2xl tracking-wide font-bold">SI FALLOR, SUM</h2>
                     <p className="text-stone-800 text-xl tracking-wide mr-10">
-                        I am a web and software developer and designer who enjoys creating avant-garde interactive tools and interfaces. Interested in modernism, minimalism, computational graphics, machine-learning and language-learning.                    </p>
+                        I am a <strong>web and software developer and designer</strong> who enjoys creating avant-garde interactive tools and interfaces. Interested in modernism, minimalism, <strong>computational graphics, machine-learning and language-learning</strong>.
+                    </p>
                     <p className="text-stone-800 text-xl tracking-wide mr-10">
-                        Since several years ago, I have been working autonomously as a freelance web developer and graphic designer, specializing in user-centric design (UI/UX) and complex software development. I'm available in French, English, and Portuguese. Whether you're based in Paris, New York, São Paulo, or anywhere else in the world, really. I'm ready to bring your ideas to life—no matter the language or location. If you wish to hire a multi-skilled, adaptable professional, then reach out to me. Let's get started on your next project today.                     </p>
+                        Since several years ago, I have been working autonomously as a <strong>freelance web developer and graphic designer</strong>, specializing in <strong>user-centric design (UI/UX)</strong> and <strong>complex software development</strong>. I'm available in <strong>French, English, and Portuguese</strong>. Whether you're based in Paris, New York, São Paulo, or anywhere else in the world, really. I'm ready to bring your ideas to life—no matter the language or location. If you wish to hire a <strong>multi-skilled, adaptable professional</strong>, then reach out to me. Let's get started on your next project today.
+                    </p>
                 </div>
             </div>
             <div className="bg-stone-900 items-start justify-center flex-col flex gap-10 pb-[10%]">
