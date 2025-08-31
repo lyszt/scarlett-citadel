@@ -4,6 +4,10 @@
 
 /*  Basic  */
 
+@view-transition {
+  navigation: auto;
+}
+
 ::-moz-selection {
   color: #66d6f6;
   background: #b6b6b6;
