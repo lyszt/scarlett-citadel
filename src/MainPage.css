@@ -68,7 +68,7 @@
 
     }
     100% {
-        filter: contrast(.5) brightness(2) blur(10px);
+        filter: contrast(.5) brightness(2) blur(20px);
     }
 }
 @keyframes width_in{
