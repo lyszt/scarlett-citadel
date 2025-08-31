@@ -57,25 +57,21 @@ i18n
             },
             fr: {
                 translation: {
-                    // --- MainNav Component ---
                     navHome: 'Accueil',
                     navAbout: 'À propos',
                     navHireMe: 'Engagez-moi',
                     navProjects: 'Projets',
                     navResume: 'CV',
-                    // --- LanguageSelector Component ---
                     selectLanguage: 'Sélectionnez une langue',
                     chooseLanguagePrompt: 'Choisissez votre langue préférée pour le site.',
-                    // --- About Component ---
-                    aboutTitle: 'SI FALLOR, SUM', 
+                    aboutTitle: 'SI FALLOR, SUM',
                     aboutParagraph1: 'Je suis un <strong>développeur et concepteur web et logiciel</strong> qui aime créer des outils et des interfaces interactifs d\'avant-garde. Intéressé par le modernisme, le minimalisme, <strong>l\'infographie, l\'apprentissage automatique et l\'apprentissage des langues</strong>.',
-                    aboutParagraph2: 'Depuis plusieurs années, je travaille de manière autonome en tant que <strong>développeur web et graphiste indépendant</strong>, spécialisé dans la <strong>conception centrée sur l\'utilisateur (UI/UX)</strong> et le <strong>développement de logiciels complexes</strong>. Je suis disponible en <strong>français, anglais e portoghese</strong>. Que vous soyez basé à Paris, New York, São Paulo ou n\'importe où ailleurs dans le monde. Je suis prêt à donner vie à vos idées, quelle que soit la langue ou le lieu. Si vous souhaitez embaucher un <strong>professionnel polyvalent et adaptable</strong>, contactez-moi. Commençons votre prochain projet dès aujourd\'hui.',
+                    aboutParagraph2: 'Depuis plusieurs années, je travaille de manière autonome en tant que <strong>développeur web et graphiste indépendant</strong>, spécialisé dans la <strong>conception centrée sur l\'utilisateur (UI/UX)</strong> et le <strong>développement de logiciels complexes</strong>. Je suis disponible en <strong>français, anglais et portugais</strong>. Que vous soyez basé à Paris, New York, São Paulo ou n\'importe où ailleurs dans le monde. Je suis prêt à donner vie à vos idées, quelle que soit la langue ou le lieu. Si vous souhaitez embaucher un <strong>professionnel polyvalent et adaptable</strong>, contactez-moi. Commençons votre prochain projet dès aujourd\'hui.',
                     educationTitle: 'ÉDUCATION',
                     educationParagraph1: 'Mon parcours académique a commencé à la <strong>Fundação Instituto de Educação de Barueri (FIEB)</strong>, où un diplôme d\'associé m\'a donné une base solide et pratique en développement de logiciels et en mise en œuvre de projets.',
                     educationParagraph2: 'Je poursuis actuellement une licence en informatique à l\'<strong>Universidade Federal da Fronteira Sul (UFFS)</strong>. Là-bas, j\'ai été assistant d\'enseignement pour les cours d\'algorithmes et de structures de données, j\'ai mené des recherches scientifiques en intelligence artificielle (PIBIC) et j\'ai obtenu un certificat de réussite au <strong>Concours International de Programmation Universitaire (ICPC)</strong>.',
                     learnMoreButton: 'En savoir plus',
                     lattesTitle: 'Curriculum Lattes (PT-BR)',
-                    // --- MusicPlayer Component ---
                     playMusicAlt: 'Jouer le thème musical.'
                 }
             },
