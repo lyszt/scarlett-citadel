@@ -45,7 +45,7 @@ const MusicPlayer = () => {
                 </button>
             </div>
 
-            <div className="flex flex-col justify-start items-start text-left text-[.7em] text-gray-100 w-auto">
+            <div className="flex flex-col justify-start items-start text-left text-[.7em] text-black w-auto">
                 <span>{songName} - {artistName}</span>
                 <span className="text-xs">{formatTime(currentTime)}</span>
             </div>

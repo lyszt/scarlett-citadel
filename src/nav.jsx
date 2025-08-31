@@ -23,7 +23,7 @@ const MainNav = (props) => {
 
 
     return (
-        <nav className="w-350 fixed left-50 bottom-5 rounded-full
+        <nav className="w-[50vw] fixed left-50 bottom-5 rounded-full
          p-3 z-20 hover:p-3.5 >
         navGlass">
             <div className="liquidGlass-effect"></div>
@@ -33,7 +33,7 @@ const MainNav = (props) => {
             <div className="nav-content-wrapper gap-2 flex justify-center items-center">
                 <div className="left-10 absolute brightness-100 hover:brightness-80 duration-500 z-5">
                     <a className="inline-flex items-center justify-center gap-3" href="/">
-                        <h1 className="text-gray-100 text-l font-medium hover:text-blue-400">LYSZT</h1>
+                        <h1 className="text-black text-l font-medium hover:text-blue-400">LYSZT</h1>
 
                     </a>
                 </div>
