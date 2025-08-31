@@ -29,6 +29,7 @@ const About = React.forwardRef((props, ref) => {
                     <p className="text-stone-100 text-xl tracking-wide mr-10">
                         I am now undergoing a Bachelor's in Computer Science at the <strong>Universidade Federal da Fronteira Sul (UFFS)</strong>.There, I have served as an Undergraduate Teaching Assistant for algorithms and data structures, conducted scientific research in Artificial Intelligence (PIBIC), and earned a Certificate of Achievement in the <strong>International Collegiate Programming Contest (ICPC)</strong>.
                     </p>
+                    <a href="https://kaldwin.escavador.com/" target="_blank" title="Lattes curriculum (PT-BR)" className="bg-cyan-400 p-3 w-[15%] mt-5 flex flex-row justify-center items-center hover:bg-cyan-300">Learn more</a>
                 </div>
             </div>
         </section>
