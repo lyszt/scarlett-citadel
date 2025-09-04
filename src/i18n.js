@@ -253,7 +253,7 @@ i18n
                     languagesLabel: 'Langues',
                     languagesCount: '3',
 
-                    skillsTitle: 'Compétences',scarlett
+                    skillsTitle: 'Compétences',
                     skillsSubtitle: 'Technique & design',
                     skillsList: ['Python', 'JavaScript', 'React', 'Node.js', 'SQL', 'HTML/CSS', 'Design UI/UX', 'Science des données'],
                     languagesTitle: 'Langues',
