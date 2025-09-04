@@ -7,7 +7,8 @@ const navigation = [
     { key: 'navHome', name: 'Home', href: '#' },
     { key: 'navAbout', name: 'About', href: '#' },
     { key: 'navResume', name: 'Resume', href: '#' },
-    { key: 'navProjects', name: 'Projects', href: '#' }
+    { key: 'navProjects', name: 'Projects', href: '#' },
+    { key: 'navPublications', name: 'Publications', href: '#' }
 ];
 
 const languages = [
