@@ -29,5 +29,15 @@ export default [
         { allowConstantExport: true },
       ],
     },
+
+    overrides: [
+      {
+        files: ['./scripts/**/*.js'], // Target all .js files in the scripts folder
+        env: {
+          node: true, // Allow Node.js global variables
+          browser: false, // Don't allow browser global variables
+        },
+      },
+    ],
   },
 ]

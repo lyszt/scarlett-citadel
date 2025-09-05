@@ -4,6 +4,7 @@ import MainNav from './nav.jsx';
 import Intro from './intro.jsx';
 import About from "./about.jsx";
 import Resume from "./Resume.jsx";
+import PostList from "./PostList.jsx";
 import LiquidTransition from "./transitions/LiquidTransition.jsx"; // Ensure path is correct
 import './App.css';
 import './MainPage.css';
@@ -79,6 +80,18 @@ function App() {
                         <Resume />
                     </motion.div>
                 )}
+                {activePage === 'publications' && (
+                    <motion.div
+                        key="publications"
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.5 }}
+                    >
+                        <PostList />
+                    </motion.div>
+                )}
+
             </AnimatePresence>
 
             <video src={backgroundVideo} className="video-background fixed" autoPlay muted loop> </video>
