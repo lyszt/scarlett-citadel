@@ -73,10 +73,9 @@
 }
 @keyframes width_in{
     0% {
-        width: 50%;
     }
     to {
-        width: 75%;
+        width: 90%;
         opacity: 1;
     }
 }
@@ -94,10 +93,13 @@
         height: 200%;
     }
 }
+.navTitle {
+    color: black !important;
+}
 .navGlass {
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    animation: width_in 6s both;
+    animation: width_in 3s both ease-in-out;
     transition: 1s;
 }
 .sideNavGlass {

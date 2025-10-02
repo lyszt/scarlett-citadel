@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+:root {
+  color: inherit;
+}
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -47,4 +52,11 @@ body::before{
   z-index: -1;
   animation: background_animation 5s ease-in-out both;
   animation-delay: 2s;
+}
+
+.button-primary {
+  background-color: rgb(68, 73, 91);
+}
+.button-primary:hover{
+    background-color: rgb(90, 95, 115);
 }

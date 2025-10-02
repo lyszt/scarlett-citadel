@@ -34,7 +34,7 @@ const About = React.forwardRef((props, ref) => {
                     <p className="text-stone-100 text-xl tracking-wide mr-10">
                         <Trans i18nKey="educationParagraph2" components={{ strong: <strong /> }} />
                     </p>
-                    <a href="https://kaldwin.escavador.com/" target="_blank" title={t('lattesTitle')} className="bg-cyan-400 p-3 w-[15%] mt-5 flex flex-row justify-center items-center hover:bg-cyan-300">{t('learnMoreButton')}</a>
+                    <a href="https://kaldwin.escavador.com/" target="_blank" title={t('lattesTitle')} className="button-primary p-3 w-[15%] mt-5 flex flex-row justify-center items-center hover:bg-cyan-300">{t('learnMoreButton')}</a>
                 </div>
             </div>
         </section>

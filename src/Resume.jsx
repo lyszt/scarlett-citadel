@@ -100,7 +100,10 @@ const Resume = React.forwardRef((props, ref) => {
                 <span className="text-xs text-stone-500">{Math.round(level * 100)}%</span>
             </div>
             <div className="bg-stone-200 rounded-full h-2 overflow-hidden">
-                <motion.div initial={{ width: 0 }} whileInView={{ width: `${Math.round(level * 100)}%` }} viewport={{ once: true }} transition={{ duration: 0.7, delay: index * 0.04 }} className="h-full rounded-full" style={{ backgroundColor: '#06b6d4' }} aria-hidden />
+                <motion.div initial={{ width: 0 }}
+                            whileInView={{ width: `${Math.round(level * 100)}%` }} viewport={{ once: true }}
+                            transition={{ duration: 0.7, delay: index * 0.04 }} className="h-full rounded-full bg-[#d3a8df]"
+                            aria-hidden />
             </div>
         </div>
     );

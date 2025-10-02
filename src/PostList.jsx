@@ -2,9 +2,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import postsData from '../posts.json';
+import headerImage from "./assets/images/background.jpg"
 
 export default function PostList({ max = 0 }) {
     const posts = Array.isArray(postsData) ? [...postsData] : [];
+
+    // Sort by year descending, then title
     posts.sort((a, b) => {
         const yearDiff = (b.year ?? 0) - (a.year ?? 0);
         if (yearDiff !== 0) return yearDiff;
@@ -14,56 +17,49 @@ export default function PostList({ max = 0 }) {
     const visible = max > 0 ? posts.slice(0, max) : posts;
 
     if (visible.length === 0) {
-        return (
-            <div style={{ padding: 12, background: '#f8fafc', borderRadius: 8 }}>
-                <p style={{ margin: 0, color: '#4b5563' }}>No posts found.</p>
-            </div>
-        );
+        return <p>No posts available.</p>;
     }
 
     return (
-        <section aria-labelledby="posts-heading">
-            <h2 id="posts-heading" style={{ marginBottom: 12, fontSize: 20, fontWeight: 600 }}>
-                Publications
-            </h2>
+        <section className="absolute top-0 left-0 flex justify-center bg-gray-100 h-screen w-screen z-5">
+            <div className="postList text-black">
+                <div className="w-screen h-full flex items-center">
+                    
+                    <div className="card flex flex-col justify-start text-left items-start gap-5 left-10 z-6 absolute h-[60%] bg-white w-[25%]
+                     rounded-xl shadow-lg shadow-stone-600 flex items-center justify-start p-10">
+                        <h2 className="text-2xl">Publications</h2>
+                        <hr className="border-stone-200 border w-1/5 border-2"/>
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
 
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 12 }}>
-                {visible.map((post) => (
-                    <li
-                        key={post.id}
-                        style={{
-                            padding: 12,
-                            borderRadius: 8,
-                            border: '1px solid rgba(0,0,0,0.06)',
-                            boxShadow: '0 1px 2px rgba(0,0,0,0.03)'
-                        }}
-                    >
-                        <a href={`/posts/${post.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-                            <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
-                                <div>
-                                    <h3 style={{ margin: 0, fontSize: 16, fontWeight: 500 }}>{post.title ?? post.id}</h3>
-                                    {post.excerpt ? <p style={{ margin: '6px 0 0', fontSize: 13, color: '#6b7280' }}>{post.excerpt}</p> : null}
-                                </div>
-                                {post.year ? <div style={{ marginLeft: 12, fontSize: 13, color: '#6b7280' }}>{post.year}</div> : null}
-                            </header>
-
-                            {post.tags && Array.isArray(post.tags) && post.tags.length > 0 ? (
-                                <div style={{ marginTop: 10, display: 'flex', flexWrap: 'wrap', gap: 8 }}>
-                                    {post.tags.map((tag) => (
-                                        <span key={tag} style={{ fontSize: 12, padding: '4px 8px', borderRadius: 999, border: '1px solid rgba(0,0,0,0.08)' }}>
-                      {tag}
-                    </span>
-                                    ))}
-                                </div>
-                            ) : null}
-                        </a>
-                    </li>
-                ))}
-            </ul>
+                    </div>
+                    <div className="img-wrapper overflow-hidden h-5/6 w-screen relative flex items-center justify-center">
+                        <img src={headerImage} alt="" className="w-screen relative"/>
+                </div>
+                </div>
+                <h2>Publications</h2>
+                <ul>
+                    {visible.map((post) => (
+                        <li key={post.id}>
+                            <a href={`/posts/${post.id}`}>
+                                <h3>{post.title ?? post.id}</h3>
+                                {post.year && <span>{post.year}</span>}
+                                {post.excerpt && <p>{post.excerpt}</p>}
+                                {post.tags && post.tags.length > 0 && (
+                                    <ul>
+                                        {post.tags.map((tag) => (
+                                            <li key={tag}>{tag}</li>
+                                        ))}
+                                    </ul>
+                                )}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
+            </div>
         </section>
     );
 }
 
 PostList.propTypes = {
-    max: PropTypes.number
+    max: PropTypes.number,
 };
